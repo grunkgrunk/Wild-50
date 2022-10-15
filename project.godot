@@ -13,6 +13,10 @@ config_version=4
 config/name="Wild-50"
 config/icon="res://icon.png"
 
+[autoload]
+
+G="*res://G.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
