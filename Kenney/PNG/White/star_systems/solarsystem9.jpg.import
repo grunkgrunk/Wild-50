@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/solarsystem6.jpg-925b7dafa2d9d79bdb73e8321dfba8a1.stex"
+path="res://.import/solarsystem9.jpg-5b90fd0dd03e19832ae601b30b8dac5f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://star_systems/solarsystem6.jpg"
-dest_files=[ "res://.import/solarsystem6.jpg-925b7dafa2d9d79bdb73e8321dfba8a1.stex" ]
+source_file="res://Kenney/PNG/White/star_systems/solarsystem9.jpg"
+dest_files=[ "res://.import/solarsystem9.jpg-5b90fd0dd03e19832ae601b30b8dac5f.stex" ]
 
 [params]
 
