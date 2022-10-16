@@ -1,15 +1,24 @@
 extends Node2D
 
 
+
+
 # The same list but translated into english
 export(String) var book_name = "symbols"
 
 var pages = []
 
+var original_position
+var original_scale
+
 var current_page = 0
+
+var is_scary = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	original_position = position
+	original_scale = scale
 	# $Book.set_mouse_filter(false)
 	# load the file "res://Book/books.json"
 	var file = File.new()
@@ -44,12 +53,15 @@ func update_contents():
 	$Book/page_number_right.bbcode_text = "[center]" + str(current_page + 2) + "[/center]"
 
 func _on_left_pressed():
+
 	if current_page > 0:
 		$Book/pageflip.play()
 		current_page -= 2
 		update_contents()
 
 func _on_right_pressed():
+	if rand_range(0,1) > 0.9:
+		jump_scare()
 	if current_page < pages.size() - 1:
 		$Book/pageflip.play()
 		current_page += 2
@@ -78,3 +90,25 @@ func _input(event):
 				_on_left_pressed()
 			elif event.scancode == KEY_RIGHT:
 				_on_right_pressed()
+
+
+func jump_scare():
+	is_scary = true
+	scale = Vector2(0.9, 0.9)
+	G.play_sound("wscream_2.wav")
+	# wait a while
+	yield(get_tree().create_timer(0.5), "timeout")
+	is_scary = false
+	scale = original_scale
+	position = original_position
+	
+
+
+func _process(delta):
+	if not is_scary:
+		return
+
+	# shake the book
+	var shake = Vector2(rand_range(-1, 1), rand_range(-1, 1)).normalized()
+	position = original_position + shake * 10
+	
