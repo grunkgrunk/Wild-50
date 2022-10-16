@@ -7,6 +7,7 @@ var length = 150
 
 export var openable = true
 
+
 func on_click():
 	if openable:
 		clicked()
@@ -25,13 +26,15 @@ func clicked():
 	get_parent().position = p
 
 	out = !out
-	print("clicked")
 
 
 
 # func _on_Area2D_input_event(viewport, event, shape_idx ):
 # 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 # 		clicked()
+
+
+
 
 
 # # function that checks whether the mouse clicks on area2d

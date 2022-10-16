@@ -19,7 +19,6 @@ var ignore_unclickable = true
 func sort_shapes(a, b):
 	var aa = int(a.get_parent().name.substr(6,-1))
 	var bb = int(b.get_parent().name.substr(6,-1))
-	print(aa)
 	if aa < bb:
 		return true
 	else:

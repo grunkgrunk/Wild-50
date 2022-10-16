@@ -14,5 +14,24 @@
         "[center][img=200]res://Symbols/black_sulfur.png",
         "Arrows used to gain knowledge through divination.",
         "[center][img=200]res://Symbols/archer.png"
+    ],
+
+    "constellations": [
+        "[center][font=res://Fonts/large_font.tres]The Book of Constellations\n\n\n [font=res://Fonts/normal_font.tres]By Regna Htennek",
+        "",
+        "The Obsidian Mirror",
+        "[center][img=250]res://constellation1.png",
+        "The Pyramid",
+        "[center][img=250]res://constellation2.png",
+        "The Hand of Daoloth",
+        "[center][img=250]res://constellation3.png"
+    ],
+    "default": [
+        "[center][font=res://Fonts/large_font.tres]The Default Book\n\n\n [font=res://Fonts/normal_font.tres]To be filled by random nonsense",
+        "",
+        "",
+        "",
+        "",
+        "This page is intentionally left blank"
     ]
 }   

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/solarsystem9.jpg-bae9daa8ef7a15874bc478b7ca687ee3.stex"
+path="res://.import/spines.JPG-0c02310573fed3dbb8ff151650f612e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://star_systems/solarsystem9.jpg"
-dest_files=[ "res://.import/solarsystem9.jpg-bae9daa8ef7a15874bc478b7ca687ee3.stex" ]
+source_file="res://spines.JPG"
+dest_files=[ "res://.import/spines.JPG-0c02310573fed3dbb8ff151650f612e6.stex" ]
 
 [params]
 

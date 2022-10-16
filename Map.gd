@@ -7,9 +7,10 @@ extends Node2D
 
 export var n_row_cols = 4
 
-var list_of_constellations = ["Allamurrr", "Kaashe", "Morten"]
+var list_of_constellations = ["The Obsidian Mirror", "The Hand of Daoloth", "The Kneeling Ptolemy"]
 
-var list_of_stars = [["ksakdasd", "asdjajds", "Denne her vil vi have"], ["Lorem", "Ipsum", "Henrik", "Ibsen"], ["Mere pasta", "Øl", "Kaffe", "Kage"]]
+var list_of_stars = [["copilot", "pytorch", "work", "play"], ["Lorem", "Ipsum", "Henrik", "Ibsen"], ["Mere pasta", "Øl", "Kaffe", "Kage"]]
+
 
 
 var step = 0
@@ -20,6 +21,9 @@ func int2map(i):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	make_constellations()
+	$Area2D.connect("mouse_entered", self, "on_mouse_enter")
+	$Area2D.connect("mouse_exited", self, "on_mouse_exit")
+
 	$wback/Button.connect("pressed", self, "_on_back_button_pressed")
 
 	$wback/GridContainer.visible = false
@@ -33,6 +37,12 @@ func _ready():
 
 	# 	button.connect("pressed", self, "on_grid_button_pressed", [i])
 
+
+func _process(delta):
+	if get_viewport().get_mouse_position().y > get_viewport().get_size().y/3:
+		$Node2D.visible = true
+	else:
+		$Node2D.visible = false
 
 func _on_continent_button_pressed(id):
 	print("Button " + str(id) + " pressed")
@@ -103,4 +113,12 @@ func _on_back_button_pressed():
 	make_constellations()
 
 
+# func on_mouse_enter():
+# 	$Node2D.visible = true
+# 	print("mouse enter")
+
+# func on_mouse_exit():
+# 	$Node2D.visible = false
+# 	print("mouse exit")
+	
 

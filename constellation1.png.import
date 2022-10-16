@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/solarsystem6.jpg-925b7dafa2d9d79bdb73e8321dfba8a1.stex"
+path="res://.import/constellation1.png-37686882f362404406158d1d276b5b14.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://star_systems/solarsystem6.jpg"
-dest_files=[ "res://.import/solarsystem6.jpg-925b7dafa2d9d79bdb73e8321dfba8a1.stex" ]
+source_file="res://constellation1.png"
+dest_files=[ "res://.import/constellation1.png-37686882f362404406158d1d276b5b14.stex" ]
 
 [params]
 
