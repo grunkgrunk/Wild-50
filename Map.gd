@@ -7,9 +7,9 @@ extends Node2D
 
 export var n_row_cols = 4
 
-var list_of_contintents = ["Allamurrr", "Kaashe", "Morten"]
+var list_of_constellations = ["Allamurrr", "Kaashe", "Morten"]
 
-var list_of_countries = [["ksakdasd", "asdjajds", "Denne her vil vi have"], ["Lorem", "Ipsum", "Henrik", "Ibsen"], ["Mere pasta", "Øl", "Kaffe", "Kage"]]
+var list_of_stars = [["ksakdasd", "asdjajds", "Denne her vil vi have"], ["Lorem", "Ipsum", "Henrik", "Ibsen"], ["Mere pasta", "Øl", "Kaffe", "Kage"]]
 
 
 var step = 0
@@ -19,7 +19,7 @@ func int2map(i):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	make_continents()
+	make_constellations()
 	$wback/Button.connect("pressed", self, "_on_back_button_pressed")
 
 	$wback/GridContainer.visible = false
@@ -36,37 +36,42 @@ func _ready():
 
 func _on_continent_button_pressed(id):
 	print("Button " + str(id) + " pressed")
-	make_countries(id)
+	make_stars(id)
 
 
-func _on_countries_button_pressed(id):
+func _on_stars_button_pressed(id):
+	var s = "res://star_systems/solarsystem" + str(id) + ".jpg"
+	print(s)
+	$Stars.texture = load(s)
 	make_grid(id)
+	
 
 
 func on_grid_button_pressed(id):
 	print("Button " + int2map(id) + " pressed")
 
 
-func make_continents():
+
+func make_constellations():
 	var vb = $wback/VBoxContainer
-	for i in range(list_of_contintents.size()):
+	for i in range(list_of_constellations.size()):
 		var button = Button.new()
-		button.text = list_of_contintents[i]
+		button.text = list_of_constellations[i]
 		button.connect("pressed", self, "_on_continent_button_pressed", [i])
 		vb.add_child(button)
 	
 	$wback/Button.connect("pressed", self, "_on_back_button_pressed")
 
-func make_countries(id):
-	var countries = list_of_countries[id]
+func make_stars(id):
+	var stars = list_of_stars[id]
 	var vb = $wback/VBoxContainer
 	for c in vb.get_children():
 		c.queue_free()
 
-	for i in range(countries.size()):
+	for i in range(stars.size()):
 		var button = Button.new()
-		button.text = countries[i]
-		button.connect("pressed", self, "_on_countries_button_pressed", [i])
+		button.text = stars[i]
+		button.connect("pressed", self, "_on_stars_button_pressed", [i])
 		vb.add_child(button)
 
 func make_grid(id):
@@ -87,6 +92,7 @@ func make_grid(id):
 
 		button.connect("pressed", self, "on_grid_button_pressed", [i])
 
+
 func _on_back_button_pressed():
 	var vb = $wback/VBoxContainer
 	for c in vb.get_children():
@@ -94,4 +100,7 @@ func _on_back_button_pressed():
 
 	$wback/GridContainer.visible = false
 	$wback/VBoxContainer.visible = true
-	make_continents()
+	make_constellations()
+
+
+
