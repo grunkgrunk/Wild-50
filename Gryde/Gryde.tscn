@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/ui_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GrydeMix.gd" type="Script" id=2]
+[ext_resource path="res://Gryde/GrydeSprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://back_button.tscn" type="PackedScene" id=4]
+
+[node name="Gryde" type="Node2D" groups=["Sublevel"]]
+script = ExtResource( 2 )
+
+[node name="Gryde" parent="." instance=ExtResource( 3 )]
+position = Vector2( 509, 424 )
+scale = Vector2( 0.490939, 0.490939 )
+
+[node name="Added" type="RichTextLabel" parent="."]
+margin_left = 276.0
+margin_top = 104.0
+margin_right = 757.0
+margin_bottom = 175.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Added something"
+text = "Added something"
+scroll_active = false
+
+[node name="back_button" parent="." instance=ExtResource( 4 )]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scene_changer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene_changer.gd" type="Script" id=2]
+[ext_resource path="res://Kenney/PNG/White/2x/arrowLeft.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 39, 33.5 )
+
+[node name="back_button" type="Sprite"]
+position = Vector2( 57, 51 )
+texture = ExtResource( 3 )
+
+[node name="scene_changer" parent="." instance=ExtResource( 1 )]
+position = Vector2( -36, -24 )
+script = ExtResource( 2 )
+to_scene = "Game.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scene_changer"]
+position = Vector2( 35, 24.5 )
+shape = SubResource( 1 )

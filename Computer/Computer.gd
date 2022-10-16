@@ -1,11 +1,10 @@
 extends Node2D
 
+export(bool) var enabled = false
+
 var my_style = StyleBoxFlat.new()
-
 var password = "1234"
-
-var default_text = "Welcome Satan! Please login to login."
-
+var default_text = "Welcome! Please login."
 var status = "login"
 
 func _ready():
@@ -14,10 +13,13 @@ func _ready():
 	# Set the "normal" style to be your newly created style.
 	set("custom_styles/normal", my_style)
 	$LineEdit.secret = true
-	# Take focus 
-	$LineEdit.grab_focus()
-	# execute function when enter is pressed
-	$LineEdit.connect("text_entered", self, "on_enter_pressed")
+	if enabled:
+		# Take focus 
+		$LineEdit.grab_focus()
+		# execute function when enter is pressed
+		$LineEdit.connect("text_entered", self, "on_enter_pressed")
+	else:
+		$LineEdit.queue_free()
 
 
 func display_message(msg):

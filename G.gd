@@ -40,3 +40,13 @@ func _input(event):
 			if collider.has_method("on_click"):
 				collider.on_click()
 				break
+
+
+func play_sound(sound):
+	var audio = AudioStreamPlayer2D.new()
+	audio.stream = load("res://Sounds/" + sound)
+	add_child(audio)
+	audio.play()
+	# remvoe audio after it is done playing
+	yield(audio, "finished")
+	audio.queue_free()

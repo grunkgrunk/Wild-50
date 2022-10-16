@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/ui_font.tres" type="DynamicFont" id=1]
+
+[node name="Intro" type="RichTextLabel"]
+margin_left = 176.0
+margin_top = 86.0
+margin_right = 844.0
+margin_bottom = 361.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Hello
+"
+text = "Welcome,
+
+You have to complete a ritual.
+
+It is recommended that you have a pencil and piece of paper handy.
+"
+scroll_active = false

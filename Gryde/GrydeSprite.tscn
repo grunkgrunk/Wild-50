@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Particles/White puff/whitePuff02.png" type="Texture" id=1]
+[ext_resource path="res://Particles/White puff/whitePuff01.png" type="Texture" id=2]
+[ext_resource path="res://Particles/White puff/whitePuff03.png" type="Texture" id=3]
+[ext_resource path="res://Gryde/gryde.png" type="Texture" id=4]
+[ext_resource path="res://Particles/White puff/whitePuff00.png" type="Texture" id=5]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0.00452489, 0.547511 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 2
+emission_box_extents = Vector3( 10, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 400, 0 )
+initial_velocity = 388.06
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 720.0
+angle_random = 1.0
+scale = 0.3
+scale_random = 1.0
+color = Color( 1, 1, 1, 0.713726 )
+color_ramp = SubResource( 7 )
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="AnimatedTexture" id=5]
+flags = 4
+frames = 4
+fps = 0.0
+frame_0/texture = ExtResource( 5 )
+frame_1/texture = ExtResource( 2 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 1 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 3 )
+frame_3/delay_sec = 0.0
+
+[node name="Gryde" type="Sprite"]
+position = Vector2( 497, 493 )
+scale = Vector2( 0.210938, 0.210938 )
+texture = ExtResource( 4 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 9.48145, -436.148 )
+rotation = -0.0320346
+amount = 10
+lifetime = 3.0
+process_material = SubResource( 4 )
+texture = SubResource( 5 )

@@ -8,7 +8,7 @@
 [ext_resource path="res://Kenney/PNG/White/2x/arrowLeft.png" type="Texture" id=6]
 [ext_resource path="res://Fonts/small_font.tres" type="DynamicFont" id=7]
 
-[node name="Node2D" type="Node2D"]
+[node name="Book" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 451, 278 )
