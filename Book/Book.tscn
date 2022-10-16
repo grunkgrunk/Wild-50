@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Book/Book.gd" type="Script" id=1]
+[ext_resource path="res://OldEnglishFive.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Book/journal-1577764_1280.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 451, 278 )
+scale = Vector2( 0.508025, 0.508025 )
+texture = ExtResource( 3 )
+
+[node name="Book" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="left_page" type="RichTextLabel" parent="Book"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 174.0
+margin_top = 125.0
+margin_right = 430.0
+margin_bottom = 430.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Sociobiology and behavioral neuroscience
+Anthropologists have also analyzed ritual via insights from other behavioral sciences. The idea that cultural rituals share behavioral similarities with personal rituals of individuals was discussed early on by Freud.[70] Dulaney and Fiske compared ethnographic descriptions of both rituals and non-ritual doings, such as work to behavioral descriptions from clinical descriptions of obsessive–compulsive disorder (OCD).[71] They note that OCD behavior often consists of such behavior as constantly cleaning objects, concern or disgust with bodily waste or secretions, repetitive actions to prevent harm, heavy emphasis on number or order of actions etc. They then show that ethnographic descriptions of cultural rituals contain around 5 times more of such content than ethnographic descriptions of other activities such as \"work\". Fiske later repeated similar analysis with more descriptions from a larger collection of different cultures, also contrasting descriptions of cultural rituals to descriptions of other behavioral disorders (in addition to OCD), in order to show that only OCD-like behavior (not other illnesses) shares properties with rituals.[72] The authors offer tentative explanations for these findings, for example that these behavioral traits are widely needed for survival, to control risk, and cultural rituals are often performed in the context of perceived collective risk.
+
+Other anthropologists have taken these insights further, and constructed more elaborate theories based on the brain functions and physiology. Liénard and Boyer suggest that commonalities between obsessive behavior in individuals and similar behavior in collective contexts possibly share similarities due to underlying mental processes they call hazard precaution. They suggest that individuals of societies seem to pay more attention to information relevant to avoiding hazards, which in turn can explain why collective rituals displaying actions of hazard precaution are so popular and prevail for long periods in cultural transmission.[73]"
+text = "Sociobiology and behavioral neuroscience
+Anthropologists have also analyzed ritual via insights from other behavioral sciences. The idea that cultural rituals share behavioral similarities with personal rituals of individuals was discussed early on by Freud.[70] Dulaney and Fiske compared ethnographic descriptions of both rituals and non-ritual doings, such as work to behavioral descriptions from clinical descriptions of obsessive–compulsive disorder (OCD).[71] They note that OCD behavior often consists of such behavior as constantly cleaning objects, concern or disgust with bodily waste or secretions, repetitive actions to prevent harm, heavy emphasis on number or order of actions etc. They then show that ethnographic descriptions of cultural rituals contain around 5 times more of such content than ethnographic descriptions of other activities such as \"work\". Fiske later repeated similar analysis with more descriptions from a larger collection of different cultures, also contrasting descriptions of cultural rituals to descriptions of other behavioral disorders (in addition to OCD), in order to show that only OCD-like behavior (not other illnesses) shares properties with rituals.[72] The authors offer tentative explanations for these findings, for example that these behavioral traits are widely needed for survival, to control risk, and cultural rituals are often performed in the context of perceived collective risk.
+
+Other anthropologists have taken these insights further, and constructed more elaborate theories based on the brain functions and physiology. Liénard and Boyer suggest that commonalities between obsessive behavior in individuals and similar behavior in collective contexts possibly share similarities due to underlying mental processes they call hazard precaution. They suggest that individuals of societies seem to pay more attention to information relevant to avoiding hazards, which in turn can explain why collective rituals displaying actions of hazard precaution are so popular and prevail for long periods in cultural transmission.[73]"
+scroll_active = false
+custom_effects = [ null ]
+
+[node name="right_page" type="RichTextLabel" parent="Book"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 457.0
+margin_top = 130.0
+margin_right = 724.0
+margin_bottom = 424.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Sociobiology and behavioral neuroscience
+Anthropologists have also analyzed ritual via insights from other behavioral sciences. The idea that cultural rituals share behavioral similarities with personal rituals of individuals was discussed early on by Freud.[70] Dulaney and Fiske compared ethnographic descriptions of both rituals and non-ritual doings, such as work to behavioral descriptions from clinical descriptions of obsessive–compulsive disorder (OCD).[71] They note that OCD behavior often consists of such behavior as constantly cleaning objects, concern or disgust with bodily waste or secretions, repetitive actions to prevent harm, heavy emphasis on number or order of actions etc. They then show that ethnographic descriptions of cultural rituals contain around 5 times more of such content than ethnographic descriptions of other activities such as \"work\". Fiske later repeated similar analysis with more descriptions from a larger collection of different cultures, also contrasting descriptions of cultural rituals to descriptions of other behavioral disorders (in addition to OCD), in order to show that only OCD-like behavior (not other illnesses) shares properties with rituals.[72] The authors offer tentative explanations for these findings, for example that these behavioral traits are widely needed for survival, to control risk, and cultural rituals are often performed in the context of perceived collective risk.
+
+Other anthropologists have taken these insights further, and constructed more elaborate theories based on the brain functions and physiology. Liénard and Boyer suggest that commonalities between obsessive behavior in individuals and similar behavior in collective contexts possibly share similarities due to underlying mental processes they call hazard precaution. They suggest that individuals of societies seem to pay more attention to information relevant to avoiding hazards, which in turn can explain why collective rituals displaying actions of hazard precaution are so popular and prevail for long periods in cultural transmission.[73]"
+text = "Sociobiology and behavioral neuroscience
+Anthropologists have also analyzed ritual via insights from other behavioral sciences. The idea that cultural rituals share behavioral similarities with personal rituals of individuals was discussed early on by Freud.[70] Dulaney and Fiske compared ethnographic descriptions of both rituals and non-ritual doings, such as work to behavioral descriptions from clinical descriptions of obsessive–compulsive disorder (OCD).[71] They note that OCD behavior often consists of such behavior as constantly cleaning objects, concern or disgust with bodily waste or secretions, repetitive actions to prevent harm, heavy emphasis on number or order of actions etc. They then show that ethnographic descriptions of cultural rituals contain around 5 times more of such content than ethnographic descriptions of other activities such as \"work\". Fiske later repeated similar analysis with more descriptions from a larger collection of different cultures, also contrasting descriptions of cultural rituals to descriptions of other behavioral disorders (in addition to OCD), in order to show that only OCD-like behavior (not other illnesses) shares properties with rituals.[72] The authors offer tentative explanations for these findings, for example that these behavioral traits are widely needed for survival, to control risk, and cultural rituals are often performed in the context of perceived collective risk.
+
+Other anthropologists have taken these insights further, and constructed more elaborate theories based on the brain functions and physiology. Liénard and Boyer suggest that commonalities between obsessive behavior in individuals and similar behavior in collective contexts possibly share similarities due to underlying mental processes they call hazard precaution. They suggest that individuals of societies seem to pay more attention to information relevant to avoiding hazards, which in turn can explain why collective rituals displaying actions of hazard precaution are so popular and prevail for long periods in cultural transmission.[73]"
+scroll_active = false
+custom_effects = [ null ]
+
+[node name="page_number_left" type="RichTextLabel" parent="Book"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 256.0
+margin_top = 435.0
+margin_right = 314.0
+margin_bottom = 462.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "p. 1
+"
+text = "p. 1
+"
+scroll_active = false
+custom_effects = [ null ]
+
+[node name="page_number_right" type="RichTextLabel" parent="Book"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 583.0
+margin_top = 433.0
+margin_right = 647.0
+margin_bottom = 457.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "p.1"
+text = "p.1"
+scroll_active = false
+custom_effects = [ null ]
+
+[node name="Left" type="Button" parent="Book"]
+margin_left = 96.0
+margin_top = 269.0
+margin_right = 163.0
+margin_bottom = 289.0
+text = "Previous"
+
+[node name="Right" type="Button" parent="Book"]
+margin_left = 766.0
+margin_top = 274.0
+margin_right = 808.0
+margin_bottom = 294.0
+text = "Next"
