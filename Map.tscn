@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Map.gd" type="Script" id=1]
-[ext_resource path="res://stars.jpg" type="Texture" id=2]
+[ext_resource path="res://stars_fewer.png" type="Texture" id=2]
+[ext_resource path="res://Book/Book.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 427.75, 130.5 )
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Stars" type="Sprite" parent="."]
-position = Vector2( 711, 321 )
+position = Vector2( 718, 302 )
+scale = Vector2( 1.17578, 1.17578 )
 texture = ExtResource( 2 )
 
 [node name="wback" type="VBoxContainer" parent="."]
@@ -28,3 +33,15 @@ margin_top = 8.0
 margin_right = 73.0
 margin_bottom = 28.0
 text = "Start over"
+
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( -53, 104 )
+z_as_relative = false
+book_name = "constellations"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 387.75, 472.5 )
+z_index = 100
+shape = SubResource( 1 )

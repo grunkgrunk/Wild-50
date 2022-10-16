@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 
 # The same list but translated into english
@@ -10,7 +10,7 @@ var current_page = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
+	# $Book.set_mouse_filter(false)
 	# load the file "res://Book/books.json"
 	var file = File.new()
 	file.open("res://Book/books.json", File.READ)
@@ -21,8 +21,8 @@ func _ready():
 	# get the symbols
 	print(pages)
 
-	$Left.connect("pressed", self, "_on_left_pressed")
-	$Right.connect("pressed", self, "_on_right_pressed")
+	$Book/Left.connect("pressed", self, "_on_left_pressed")
+	$Book/Right.connect("pressed", self, "_on_right_pressed")
 	update_contents()
 
 func get_page(idx):
@@ -31,27 +31,27 @@ func get_page(idx):
 	return pages[idx]
 
 func update_contents():
-	$Left.show()
-	$Right.show()
+	$Book/Left.show()
+	$Book/Right.show()
 	if current_page <= 0:
-		$Left.hide()
+		$Book/Left.hide()
 	if current_page >= pages.size():
-		$Right.hide()
+		$Book/Right.hide()
 
-	$left_page.bbcode_text  = get_page(current_page)
-	$right_page.bbcode_text = get_page(current_page + 1)
-	$page_number_left.bbcode_text =  "[center]" + str(current_page + 1) + "[/center]"
-	$page_number_right.bbcode_text = "[center]" + str(current_page + 2) + "[/center]"
+	$Book/left_page.bbcode_text  = get_page(current_page)
+	$Book/right_page.bbcode_text = get_page(current_page + 1)
+	$Book/page_number_left.bbcode_text =  "[center]" + str(current_page + 1) + "[/center]"
+	$Book/page_number_right.bbcode_text = "[center]" + str(current_page + 2) + "[/center]"
 
 func _on_left_pressed():
 	if current_page > 0:
-		$pageflip.play()
+		$Book/pageflip.play()
 		current_page -= 2
 		update_contents()
 
 func _on_right_pressed():
 	if current_page < pages.size() - 1:
-		$pageflip.play()
+		$Book/pageflip.play()
 		current_page += 2
 		update_contents()
 	
