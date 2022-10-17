@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/wscream_2.wav-45af5d232f5091ef3e7d001c1de007f0.sample"
+path="res://.import/drawer_close.wav-7407135c379a05888433a38901d47703.sample"
 
 [deps]
 
-source_file="res://Sounds/wscream_2.wav"
-dest_files=[ "res://.import/wscream_2.wav-45af5d232f5091ef3e7d001c1de007f0.sample" ]
+source_file="res://Sounds/drawer_close.wav"
+dest_files=[ "res://.import/drawer_close.wav-7407135c379a05888433a38901d47703.sample" ]
 
 [params]
 

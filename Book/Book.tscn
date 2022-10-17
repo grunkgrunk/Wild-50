@@ -9,7 +9,7 @@
 [ext_resource path="res://Fonts/small_font.tres" type="DynamicFont" id=7]
 
 [node name="Book" type="Node2D"]
-position = Vector2( 364, 248 )
+position = Vector2( 1, -1.99998 )
 scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 1 )
 

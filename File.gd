@@ -27,9 +27,10 @@ func on_click():
 
 	get_tree().get_root().add_child(book)
 
-	# place in the middle of the screen
-	book.global_position = Vector2(100, 100)
-
+	# place the book in the center of the screen
+	book.position = get_tree().get_root().get_viewport().size / 2
+	# book.position.x -= book.get_node("Sprite").texture.get_width() * book.get_node("Sprite").scale.x  / 2
+	book.position.y -= book.get_node("Sprite").texture.get_height() * book.get_node("Sprite").scale.y/ 2
 	print(name)
 
 	# add button

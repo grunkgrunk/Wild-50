@@ -63,3 +63,6 @@ openable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tabler0/Area2D"]
 position = Vector2( -2, 110 )
 shape = SubResource( 2 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+volume_db = -4.0
